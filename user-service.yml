@@ -1,17 +1,20 @@
 server:
-  port: 8083
+  port: 8081
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/hotel_service
-    username: rahul
-    password: 1234
-    driver-class-name: org.postgresql.Driver
+  application:
+    name: user-service
+
   jpa:
     hibernate:
       ddl-auto: update
-  application:
-    name: hotel-service
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_service
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 eureka:
   instance:
